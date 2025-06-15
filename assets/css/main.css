@@ -1,0 +1,97 @@
+@font-face {font-family: 'SFNS Display';src: url('fonts/SFNSDisplay-Regular.otf') format('opentype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'SFNS Display';src: url('fonts/SFNSDisplay-Semibold.otf') format('opentype');font-weight: 600;font-style: normal;}
+@font-face {font-family: 'SFNS Display';src: url('fonts/SFNSDisplay-Heavy.otf') format('opentype');font-weight: 800;font-style: normal;}
+@font-face {font-family: 'SFNS Display';src: url('fonts/SFNSDisplay-Black.otf') format('opentype');font-weight: 900;
+font-style: normal;}
+
+@font-face { font-family: 'SFNSText'; src: url('/fonts/SFNSText-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'SFNSText'; src: url('/fonts/SFNSText-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'SFNSText'; src: url('/fonts/SFNSText-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'SFNSText'; src: url('/fonts/SFNSText-Heavy.otf') format('opentype'); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'SFNSText'; src: url('/fonts/SFNSText-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+
+:root {
+    /* Tipografia */
+    --font-primary: SFNS Display, sans-serif;
+    --font-secondary: SFNSText, sans-serif;
+
+    /* Bordas */
+    --border-radius: 144px;
+    --border: 28px;
+
+    /* Cores principais */
+    --main-color: #dedede;
+    --sub-color: #ccc;
+    --bg-color: #323232;
+    --accent-color: #fff;
+
+    /* Paleta de Cores */
+    --cor-1: #E0C389;
+    --cor-2: #010101;
+    --cor-3: #FAFBED;
+    --cor-4: #F2E5D2
+    --background-color: #FFFFFF;
+    --highlight-color: #71401c;
+}
+
+/**---------------------------------------------------------
+    ESTILOS DAS TAGS 
+**---------------------------------------------------------*/
+body {background: linear-gradient(90deg,rgba(242, 229, 210, 1) 10%, rgba(255, 255, 255, 1) 48%, rgba(242, 229, 210, 1) 90%); font-family: var(--font-secondary);}
+h1, h2, h3 {font-family: var(--font-primary);font-weight: bold; }
+h1 {font-size: clamp(3rem, 4.9vw, 7rem); color: #442812;}
+a {transition: .5s;}
+address a:hover {font-weight: bold;}
+
+/**---------------------------------------------------------
+    ESTILOS DAS SEÇÕES 
+**---------------------------------------------------------*/
+.linha-fade {height: 4px;width: 100%;background: linear-gradient(to right, transparent 0%, #7b441b 50%, transparent 100%);margin: 63px 0;transition: opacity 0.5s ease, height 0.5s ease;transform-origin: center;}
+
+#hero {height: 24vh;}
+#projetos h2 {font-size: 2.8rem;}
+
+.nav-link {color: var(--highlight-color); transition: .5s ease-in;border-bottom: 1px solid transparent; }
+.nav-link:hover {color: var(--highlight-color); font-weight: bold!important; border-bottom: 1px solid var(--highlight-color);}
+.nav-link:focus {color: var(--highlight-color); font-weight: bold!important; border-bottom: 1px solid var(--highlight-color);}
+.nav-link.active {color: var(--highlight-color)!important;}
+.carousel-item {text-align: center;}
+
+
+/**---------------------------------------------------------
+    ESTILOS DAS CARDS
+**---------------------------------------------------------*/
+.card {position: relative; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; width: 100%; padding: 25px; border-radius: 25px; display: flex; flex-direction: column; gap: 5px; background-color: var(--bg-color); transition: all 0.2s; cursor: pointer; box-shadow: 0px 0px 5px -1.5px #000;}
+.card::before {content: ''; width: 99%; height: 99%; background: var(--sub-color); position: absolute; z-index: -1; top: 1px; left: 1px; border-radius: 25px; transition: all 0.3s;}
+.card__wrapper {display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+.card__img {width: 100%;}
+.card__title {color: var(--main-color); font-weight: 900; font-size: 25px;}
+.card__subtitle {color: var(--sub-color); font-weight: 600; font-size: 20px;}
+.card__icon {width: 40px; height: 40px; transform: rotate(-45deg); transition: all 0.3s;}
+.card__icon svg {width: 100%; height: 100%;}
+.card__icon g {fill: var(--main-color);}
+.card__icon circle, .card__icon polyline, .card__icon line {stroke: var(--main-color);}
+
+.card:hover {box-shadow: 0px 0px 20px -5px #000;}
+.card:hover::before {transform: rotate(10deg); box-shadow: 0px 0px 20px -5px #000;}
+.card:hover .card__icon {transform: rotate(0);}
+.card:hover .card__icon circle, .card:hover .card__icon polyline, .card:hover .card__icon line {stroke: var(--accent-color);}
+.card:hover .card__icon g {fill: var(--accent-color);}
+
+.e-card { width: 240px; height: 330px; margin: 100px auto; background: transparent; box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45); position: relative; border-radius: 16px; overflow: hidden; }
+.wave { position: absolute; top: 0; left: 0; width: 540px; height: 700px; margin-left: -50%; margin-top: -70%; background: linear-gradient(744deg, #1a1a1a, #3a3a3a 60%, #e6e6e6); opacity: 0.6; border-radius: 40%; animation: wave 55s infinite linear; }
+.wave:nth-child(2), .wave:nth-child(3) { top: 210px; }
+.wave:nth-child(2) { animation-duration: 50s; }
+.wave:nth-child(3) { animation-duration: 45s; }
+.playing .wave { animation: wave 3000ms infinite linear; }
+.playing .wave:nth-child(2) { animation-duration: 4000ms; }
+.playing .wave:nth-child(3) { animation-duration: 5000ms; }
+.icon { width: 3em; margin-top: -1em; padding-bottom: 1em; }
+.infotop { text-align: center; font-size: 20px; font-weight: 600; color: #fff; position: absolute; top: 5.6em; left: 0; right: 0; }
+
+@keyframes wave { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+
+@media (min-width: 992px) {  
+    .card__img {height: 35vh;}
+}
