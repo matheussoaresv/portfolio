@@ -9,7 +9,7 @@
      ]'>
 
     <div class="card__img">
-        <img class="object-fit-cover w-100 h-100"
+        <img loading="eager" decoding="async" fetchpriority="high" width="500" height="400" class="object-fit-cover w-100 h-100"
             src="assets/img/rafael-locali/top-img.webp"
             alt="Dr. Rafael Locali">
     </div>
