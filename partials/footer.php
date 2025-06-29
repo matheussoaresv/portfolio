@@ -1,3 +1,7 @@
+<?php 
+$whatsapp = preg_replace('/^55/', '', $whatsapp);
+$formatted = preg_replace('/(\d{2})(\d{5})(\d{4})/', '($1) $2-$3', $whatsapp);
+?>
 <footer id="contato" class="py-4">
     <div class="container-lg">
         <div class="row row-cols-1 row-cols-lg-2">
@@ -18,8 +22,7 @@
                 <address class="d-flex align-items-center">
                     <svg class="me-3 text-black" width="32" height="32" fill="currentColor" aria-hidden="true">
                         <use xlink:href="#icon-whatsapp"></use>
-                    </svg><a class="text-black text-decoration-none" target="_blank" title="Enviar mensagem no WhatsApp" href="<?= $whatsapp_url ?>"><?= preg_replace('/(\d{2})(\d{5})(\d{4})/', '($1) $2-$3', $whatsapp) ?>
-                    </a>
+                    </svg><a class="text-black text-decoration-none" target="_blank" title="Enviar mensagem no WhatsApp" href="<?= $whatsapp_url ?>"><?= $formatted ?></a>
                 </address>
 
                 <address class="d-flex align-items-center">
