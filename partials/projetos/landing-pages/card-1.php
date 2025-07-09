@@ -14,8 +14,10 @@
             alt="Dr. Rafael Locali">
     </div>
     <div class="card__subtitle">Landing Page</div>
+    <div class="card__subtitle"><strong>Segmento:</strong> Medicina</div>
     <div class="card__wrapper">
         <div class="card__title">Dr. Rafael Locali</div>
+        
         <div class="card__icon">
             <svg color="rgb(224, 223, 220)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(224, 223, 220); flex-shrink: 0; cursor: auto;" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                 <g color="rgb(224, 223, 220)">

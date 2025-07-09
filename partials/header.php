@@ -31,7 +31,7 @@ $styleCss = isset($manifest[$entry]['css']) ? '/portfolio/dist/' . $manifest[$en
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;600;700&display=swap">
 
     <?php if ($styleCss): ?>
-        <link rel="stylesheet" href="<?= $styleCss ?>">
+        <link rel="stylesheet" href="<?= $styleCss ?>" media="screen">
     <?php endif; ?>
 
 </head>

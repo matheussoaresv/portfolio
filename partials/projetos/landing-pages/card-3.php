@@ -1,7 +1,7 @@
 <div class="card"
     data-bs-toggle="modal"
     data-bs-target="#projetoModal"
-    data-title="Dr. Rafael Locali"
+    data-title="WSI - Agência de SEO"
     data-imgs='[
        "assets/img/wsi-agencia/banner.webp",
        "assets/img/wsi-agencia/cases.webp",
@@ -15,8 +15,10 @@
             alt="Chemitec - GoFind">
     </div>
     <div class="card__subtitle">Landing Page</div>
+    <div class="card__subtitle"><strong>Segmento:</strong> Marketing Digital</div>
     <div class="card__wrapper">
         <div class="card__title">WSI - Agência de SEO</div>
+        
         <div class="card__icon">
             <svg color="rgb(224, 223, 220)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(224, 223, 220); flex-shrink: 0; cursor: auto;" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                 <g color="rgb(224, 223, 220)">

@@ -2,12 +2,12 @@
     <div class="container-lg">
         <div class="row row-cols-1">
             <div class="col">
-                <h2 class="text-center">Conheça os meus projetos</h2>
+                <h2 class="text-center">Conheça alguns dos meus projetos</h2>
             </div>
         </div>
         <div class="swiper projetos py-5">
             <div class="swiper-wrapper">
-                <?php for ($i = 1; $i <= 3; $i++): ?>
+                <?php for ($i = 1; $i <= 4; $i++): ?>
                     <div class="swiper-slide">
                         <?php include_once "partials/projetos/landing-pages/card-$i.php" ?>
                     </div>
